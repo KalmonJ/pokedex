@@ -1,57 +1,65 @@
-:host{
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
-
-  .pokemon{
-    width: 49%;
-    background-color: #fff;
+:host {
+  .listagem {
     display: flex;
-    padding: 1.7rem;
-    border-radius: 8px;
-    height: 157px;
-    position: relative;
+    justify-content: space-between;
+    padding: 20px 0;
+    flex-wrap: wrap;
 
-    &__status{
-      h2{
-        font-style: italic;
-        font-weight: bold;
-        font-size: 22px;
-        margin-bottom: 10px;
-      }
-      
-      ul{
-        display: flex;
-        flex-direction: column;
+    .pokemon {
+      width: 49%;
+      background-color: #fff;
+      display: flex;
+      padding: 1.7rem;
+      border-radius: 8px;
+      height: 157px;
+      position: relative;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #262835;
 
-        li{
-          list-style: none;
-          background: #efefef;
-          font-size: 10px;
+      &__status {
+        h2 {
+          font-style: italic;
+          font-weight: bold;
+          font-size: 22px;
+          margin-bottom: 10px;
+          text-transform: capitalize;
+        }
+
+        ul {
           display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50px;
+          flex-direction: column;
+
+          li {
+            list-style: none;
+            background: #efefef;
+            font-size: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            width: 60px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: 90px;
+        width: 110px;
+        right: 20px;
+        bottom: 20px;
+        background: url("../../../assets/bg.svg") no-repeat;
+
+        img {
           width: 60px;
-          margin-bottom: 5px;
         }
       }
     }
-
-    &__image{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      height: 90px;
-      width: 110px;
-      right: 20px;
-      bottom: 20px;
-      background: url("../../../assets/bg.svg") no-repeat;
-
-      img{
-        width: 80px;
-      }
-    }
   }
+
 }
